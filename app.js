@@ -24,7 +24,7 @@ const buttonsAttend = (array) => {
         button.addEventListener('click', () => {
             activateSelectedButton(button)
             const clickedOption = button.dataset.option
-            rendercards(clickedOption);
+            render(clickedOption);
         })        
     });
 }
@@ -40,11 +40,11 @@ const buttonsAttend = (array) => {
 
 // write an async function
 
-const loadData = async () => {
+const retreiveData = async () => {
     const response = await fetch('data.json')
     const fetchedData = await response.json()
     data = fetchedData
-     buttons[1].click()
+     buttons[0].click()
 
 }
 // -also clear existing render activity once we click another button
@@ -56,7 +56,7 @@ const clearActivities = () => {
 
 
 // -write the render function 
-const rendercards = async (clickedOption) => {
+const render = async (clickedOption) => {
     
     clearActivities();
 
@@ -115,4 +115,4 @@ data.forEach(activity => {
 }
 
 buttonsAttend(buttons)
-loadData()
+retreiveData()
