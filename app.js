@@ -1,5 +1,5 @@
 /*
-=========== FUNCTION DYNAMIC FLOW======HOWTO STEPS========= 
+------------------------------------------HOW TO STEPS-------------------------------------------------
 -Write a call back function that will listen to /select the clicked button ( either daily, weekly and monthly button)
 -pass array as the parameter
 - inside the function write a foreach method for the buttons 
@@ -7,7 +7,7 @@
 -Tell the event listern to run (activateSelectedButton) function
 -select the activity option from that dataset that we have in the JSON file and save in a variable
 -Finally render each activity passing the activatedOption variable as the parameter
-====Following steps ========
+-------Following steps---------------
 -write activateSelectButton function
 -fetch the dataset function from the JSON fiile and save it in the clickedOption variable
 -write the render function 
