@@ -291,7 +291,7 @@ section.tracker-menu {
   gap: 1rem;
 }
 
-.activity-timeframe-now {
+.activity-timeframe-current {
   font-size: var(--font-size-activity-result);
   font-weight: 300;
   color: white;
