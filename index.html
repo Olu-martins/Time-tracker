@@ -9,56 +9,58 @@
   <title> Time tracking dashboard</title>  
 </head>
 <body>
-  <section class="activity-tracker">
-    <section class="tracker-menu">
-      <div class="tracker-profile">
-        <img class="tracker-profile-img" src="/images/image-jeremy.png" alt="">
-        <div class="tracker-profile-container">
-          <p class="tracker-for">
-            Report for:
-          </p>
-          <h1 class="tracker-profile-name">Jeremy Robson</h1>
-        </div>
-      </div>      
-      <div class="tracker-menu-options">
-        <button class="tracker-option" data-option="daily">
-          Daily
-        </button>
-        <button class="tracker-option" data-option="weekly">
-          Weekly
-        </button><button class="tracker-option" data-option="monthly">
-          Monthly
-        </button>
-      </div>      
-    </section>
-    <section class="tracker-activity work">
-      <div class="activity-background">
-        <img src="./images/icon-work.svg" alt="">
-      </div>
-      <div class="activity-info">
-        <header>
-          <h2 class="activity-name">
-            Work
-          </h2>
-          <button class="activity-options">
-            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" 
-              fill="#BBC0FF" fill-rule="evenodd"/></svg>
+  <main>
+    <section class="activity-tracker">
+      <section class="tracker-menu">
+        <div class="tracker-profile">
+          <img class="tracker-profile-img" src="/images/image-jeremy.png" alt="">
+          <div class="tracker-profile-container">
+            <p class="tracker-for">
+              Report for:
+            </p>
+            <p class="tracker-profile-name">Jeremy Robson</p>
+          </div>
+        </div>      
+        <div class="tracker-menu-options">
+          <button class="tracker-option" data-option="daily">
+            Daily
           </button>
-        </header>
-        <div class="activity-timeframes-wrapper">
-          <div class="activity-timeframes">
-            <h3 class="activity-timeframe-current">5hrs</h3>
-          </div>
-          <div class="activity-timeframe-previous">
-            <p class="time-when">Lask week</p>
-            <p> - </p>
-            <p class="total-time">7hrs</p>
+          <button class="tracker-option" data-option="weekly">
+            Weekly
+          </button><button class="tracker-option" data-option="monthly">
+            Monthly
+          </button>
+        </div>      
+      </section>
+      <section class="tracker-activity work">
+        <div class="activity-background">
+          <img src="./images/icon-work.svg" alt="">
+        </div>
+        <div class="activity-info">
+          <header>
+            <h2 class="activity-name">
+              Work
+            </h2>
+            <button class="activity-options">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" 
+                fill="#BBC0FF" fill-rule="evenodd"/></svg>
+            </button>
+          </header>
+          <div class="activity-timeframes-wrapper">
+            <div class="activity-timeframes">
+              <h3 class="activity-timeframe-current">5hrs</h3>
+            </div>
+            <div class="activity-timeframe-previous">
+              <p class="time-when">Lask week</p>
+              <p> - </p>
+              <p class="total-time">7hrs</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </section>    
+      </section>
+    </section>    
+  </main>
   <script src="app.js"></script>
 </body>
 </html>
