@@ -1,19 +1,3 @@
-/*
-=========== FUNCTION DYNAMIC FLOW======HOWTO STEPS========= 
--Write a call back function that will listen to /select the clicked button ( either daily, weekly and monthly button)
--pass array as the parameter
-- inside the function write a foreach method for the buttons 
--add a click eventListener to the button in the foreach method 
--Tell the event listern to run (activateSelectedButton) function
--select the activity option from that dataset that we have in the JSON file and save in a variable
--Finally render each activity passing the activatedOption variable as the parameter
-====Following steps ========
--write activateSelectButton function
--fetch the dataset function from the JSON fiile and save it in the clickedOption variable
--write the render function 
--also clear existing render activity once we click another button
-*/
-
 // select all the buttons @ query selector all
 const buttons = [...document.querySelectorAll('.tracker-option')]
 
@@ -35,32 +19,24 @@ const buttonsAttend = (array) => {
     button.classList.add('active')
 }
 
-
 // -fetch the dataset function from the JSON fiile and save it in the Selected Option variable
-
-// write an async function
-
 const retreiveData = async () => {
     const response = await fetch('data.json')
     const fetchedData = await response.json()
     data = fetchedData
-     buttons[1].click()
+     buttons[0].click()
 
 }
-// -also clear existing render activity once we click another button
-
+// Clear existing rendered activity once another button is clicked
 const clearActivities = () => {
     const activities = document.querySelectorAll('.tracker-activity')    
     activities.forEach(a => a.remove())
 }
 
-// -write the render function 
-const render = async (clickedOption) => {
-    
+// Render function 
+const render = async (clickedOption) => {    
     clearActivities();
-
 const activityTracker = document.querySelector('section.activity-tracker')
-
 const determineTimeframe = (option) => {   
   switch (option) {
     case 'daily':
@@ -114,9 +90,6 @@ data.forEach(activity => {
   section.innerHTML = activityTodisplay
   activityTracker.append(section)
 })
-
-
 }
-
 buttonsAttend(buttons)
 retreiveData()
